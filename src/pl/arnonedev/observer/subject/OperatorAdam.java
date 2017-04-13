@@ -10,6 +10,7 @@ import java.util.List;
  */
 public class OperatorAdam implements Operator {
     List<Ambulance> ambulances = new ArrayList<>();
+    private String status = "";
 
     @Override
     public void registerObserver(Ambulance ambulance) {
@@ -29,5 +30,15 @@ public class OperatorAdam implements Operator {
 //        for (Ambulance ambulance : ambulances) {
 //            ambulance.update();
 //        }
+    }
+
+    @Override
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+        notifyObservers();
     }
 }
