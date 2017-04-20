@@ -9,8 +9,8 @@ public abstract class Car {
     protected int year;
     protected String bodyType;
 
-    abstract double price();
-    abstract String getDescription();
+    public abstract double price();
+    public abstract String getDescription();
 
     public String getMake() {
         return make;
