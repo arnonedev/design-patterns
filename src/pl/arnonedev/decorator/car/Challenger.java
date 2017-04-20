@@ -5,12 +5,12 @@ package pl.arnonedev.decorator.car;
  */
 public class Challenger extends Car {
     @Override
-    double price() {
+    public double price() {
         return 490000;
     }
 
     @Override
-    String getDescription() {
+    public String getDescription() {
         return "Challenger";
     }
 }
