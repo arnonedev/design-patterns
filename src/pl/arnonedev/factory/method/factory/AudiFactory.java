@@ -9,9 +9,12 @@ import pl.arnonedev.factory.method.model.Car;
  * Created by Arek on 2017-05-07.
  */
 public class AudiFactory extends OurCompany {
+    public AudiFactory(String place, String name) {
+        super(place, name);
+    }
 
     @Override
-    public Car orderCar(String model) {
+    protected Car makeCar(String model) {
         switch (model) {
             case "A4":
                 return new A4();

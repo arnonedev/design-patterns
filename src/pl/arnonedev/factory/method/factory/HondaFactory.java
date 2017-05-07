@@ -8,8 +8,12 @@ import pl.arnonedev.factory.method.model.Civic;
  * Created by Arek on 2017-05-07.
  */
 public class HondaFactory extends OurCompany {
+    public HondaFactory(String place, String name) {
+        super(place, name);
+    }
+
     @Override
-    public Car orderCar(String model) {
+    protected Car makeCar(String model) {
         switch (model) {
             case "CIVIC":
                 return new Civic();

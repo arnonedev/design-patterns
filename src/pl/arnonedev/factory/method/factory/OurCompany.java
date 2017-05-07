@@ -9,7 +9,18 @@ public abstract class OurCompany {
     private String place;
     private String name;
 
-    public abstract Car orderCar(String model);
+    public OurCompany(String place, String name) {
+        this.place = place;
+        this.name = name;
+    }
+
+    public Car orderCar(String model) {
+        Car car = null;
+        car = makeCar(model);
+        return car;
+    }
+
+    protected abstract Car makeCar(String model);
 
     public String getPlace() {
         return place;
@@ -25,5 +36,13 @@ public abstract class OurCompany {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "OurCompany{" +
+                "place='" + place + '\'' +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
