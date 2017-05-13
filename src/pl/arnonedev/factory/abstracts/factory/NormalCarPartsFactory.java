@@ -9,8 +9,8 @@ import pl.arnonedev.factory.abstracts.model.wheel.Wheel15In;
 /**
  * Created by Arek on 2017-05-13.
  */
-public class NormalCarFactory extends PartsFactory {
-    public NormalCarFactory() {
+public class NormalCarPartsFactory extends PartsFactory {
+    public NormalCarPartsFactory() {
         wheels = new Wheel[] {
                 new Wheel15In(), new Wheel15In(), new Wheel15In(), new Wheel15In()
         };

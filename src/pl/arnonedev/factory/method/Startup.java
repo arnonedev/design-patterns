@@ -1,7 +1,8 @@
 package pl.arnonedev.factory.method;
 
 import pl.arnonedev.factory.abstracts.factory.ExtraPartsAudiFactory;
-import pl.arnonedev.factory.abstracts.factory.NormalCarFactory;
+import pl.arnonedev.factory.abstracts.factory.ExtraPartsHondaFactory;
+import pl.arnonedev.factory.abstracts.factory.NormalCarPartsFactory;
 import pl.arnonedev.factory.method.factory.AudiFactory;
 import pl.arnonedev.factory.method.factory.HondaFactory;
 import pl.arnonedev.factory.method.factory.OurCompany;
@@ -16,10 +17,11 @@ public class Startup {
         System.out.println(company);
         Car car = company.orderCar("A8");
         System.out.println(car);
+        company = new AudiFactory("Poland", "Audi factory", new NormalCarPartsFactory());
         car = company.orderCar("A4");
         System.out.println(car);
 
-        company = new HondaFactory("Japan", "Honda factory", new NormalCarFactory());
+        company = new HondaFactory("Japan", "Honda factory", new ExtraPartsHondaFactory());
         System.out.println(company);
         car = company.orderCar("ACCORD");
         System.out.println(car);
