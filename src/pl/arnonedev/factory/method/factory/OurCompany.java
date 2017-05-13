@@ -20,9 +20,9 @@ public abstract class OurCompany {
     public Car orderCar(String model) {
         Car car = null;
         car = makeCar(model);
-        car.setWheels(partsFactory.getWheels());
-        car.setAudio(partsFactory.getAudio());
-        car.setLamps(partsFactory.getLamps());
+        car.setWheels(partsFactory.makeWheels());
+        car.setAudio(partsFactory.makeAudio());
+        car.setLamps(partsFactory.makeLamps());
         return car;
     }
 

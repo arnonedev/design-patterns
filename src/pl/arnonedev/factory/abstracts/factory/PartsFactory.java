@@ -8,19 +8,7 @@ import pl.arnonedev.factory.abstracts.model.wheel.Wheel;
  * Created by Arek on 2017-05-13.
  */
 public abstract class PartsFactory {
-    protected Wheel[] wheels;
-    protected Audio audio;
-    protected Lamp[] lamps;
-
-    public Wheel[] getWheels() {
-        return wheels;
-    }
-
-    public Audio getAudio() {
-        return audio;
-    }
-
-    public Lamp[] getLamps() {
-        return lamps;
-    }
+    public abstract Wheel[] makeWheels();
+    public abstract Lamp[] makeLamps();
+    public abstract Audio makeAudio();
 }
