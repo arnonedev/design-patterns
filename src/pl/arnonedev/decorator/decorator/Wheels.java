@@ -19,6 +19,6 @@ public class Wheels extends CarDecorator {
 
     @Override
     public String getDescription() {
-        return car.getDescription() + ", 22\" wheels";
+        return car.getDescription() + ", 22\" wheel";
     }
 }
