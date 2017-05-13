@@ -1,5 +1,6 @@
 package pl.arnonedev.factory.method.factory;
 
+import pl.arnonedev.factory.abstracts.factory.PartsFactory;
 import pl.arnonedev.factory.method.model.Car;
 
 /**
@@ -8,15 +9,20 @@ import pl.arnonedev.factory.method.model.Car;
 public abstract class OurCompany {
     private String place;
     private String name;
+    private PartsFactory partsFactory;
 
-    public OurCompany(String place, String name) {
+    public OurCompany(String place, String name, PartsFactory partsFactory) {
         this.place = place;
         this.name = name;
+        this.partsFactory = partsFactory;
     }
 
     public Car orderCar(String model) {
         Car car = null;
         car = makeCar(model);
+        car.setWheels(partsFactory.getWheels());
+        car.setAudio(partsFactory.getAudio());
+        car.setLamps(partsFactory.getLamps());
         return car;
     }
 
